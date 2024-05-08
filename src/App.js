@@ -1,8 +1,16 @@
+import { Provider } from "react-redux";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import store from "./utils/store";
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-red-700 font-bold text-3xl">YouTube-Mirror</h1>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        <Sidebar />
+      </div>
+    </Provider>
   );
 }
 
