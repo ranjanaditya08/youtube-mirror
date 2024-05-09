@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between mt-2 px-6 py-2">
+    <div className="sticky top-0 z-50 bg-white flex justify-between mt-2 px-6 py-2">
       <div className="flex">
         <img
           onClick={() => toggleMenuHandler()}
@@ -27,7 +27,7 @@ const Header = () => {
       </div>
       <div className="flex">
         <input
-          className="w-[550px] h-9 rounded-l-full border border-gray-400 focus:outline-none focus:border-blue-700 px-4 py-1"
+          className="lg:w-[550px] h-9 rounded-l-full border border-gray-400 focus:outline-none focus:border-blue-700 px-4 py-1"
           type="text"
           placeholder="Search"
         />

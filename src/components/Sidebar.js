@@ -6,7 +6,7 @@ const Sidebar = () => {
 
   return (
     isMenuOpen && (
-      <div className="w-52 h-full px-3 mt-2 transition duration-150">
+      <div className="w-52 h-full px-3 transition duration-150 bg-white">
         <ul className="border-b mb-1">
           <li className="list-style">Home</li>
           <li className="list-style">Shorts</li>
