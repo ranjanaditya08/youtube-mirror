@@ -9,11 +9,12 @@ const VideoContainer = () => {
     <div className="mt-6 flex flex-wrap">
       {videos.map((video) => (
         <Link
+          key={video.id}
           to={
             "/watch?v=" + video.id + "&ab_channel=" + video.snippet.channelTitle
           }
         >
-          <VideoCard key={video.id} info={video} />
+          <VideoCard info={video} />
         </Link>
       ))}
     </div>

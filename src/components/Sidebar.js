@@ -9,7 +9,9 @@ const Sidebar = () => {
     isMenuOpen && (
       <div className="w-52 h-full px-3 transition duration-150 bg-white">
         <ul className="border-b mb-1">
-          <li className="list-style"><Link to={"/"}>Home</Link></li>
+          <Link to={"/"}>
+            <li className="list-style">Home</li>
+          </Link>
           <li className="list-style">Shorts</li>
           <li className="list-style mb-2">Subscriptions</li>
         </ul>
