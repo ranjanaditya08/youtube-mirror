@@ -23,7 +23,7 @@ const VideoCard = ({ info }) => {
         src={thumbnails.medium.url}
       />
       <ul>
-        <li className="font-bold text-wrap">{title}</li>
+        <li className="font-bold overflow-hidden">{title}</li>
         <li className="text-gray-500">{channelTitle}</li>
         <li className="text-gray-500 text-sm">
           {viewCount}
