@@ -1,23 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/menuDrawerSlice";
 import { useSearchParams } from "react-router-dom";
-import useVideoList from "../utils/usevideoList";
 import Description from "./Description";
 import CommentsContainer from "./CommentsContainer";
-
-
+import { GET_YOUTUBE_VIDEO_BY_ID } from "../utils/constants";
 
 const WatchPage = () => {
   const [searchParam] = useSearchParams();
+  const [videoData, setVideoData] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
   }, [dispatch]);
 
-  const { videos } = useVideoList();
-
-  const videoData = videos.find((video) => video.id === searchParam.get("v"));
+  useEffect(() => {
+    getVideoData();
+  }, []);
+  const getVideoData = async () => {
+    const data = await fetch(GET_YOUTUBE_VIDEO_BY_ID + searchParam.get("v"));
+    const json = await data.json();
+    setVideoData(json.items[0]);
+  };
 
   return (
     <div>
@@ -34,7 +38,7 @@ const WatchPage = () => {
           allowFullScreen
         ></iframe>
         {videoData && <Description snippet={videoData.snippet} />}
-        <CommentsContainer videoId={searchParam.get('v')}/>
+        <CommentsContainer videoId={searchParam.get("v")} />
       </div>
     </div>
   );
