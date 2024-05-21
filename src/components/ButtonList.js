@@ -1,26 +1,12 @@
 import React from "react";
 import Button from "./Button";
+import { listOfButtons } from "../utils/constants";
 
-const listOfButtons = [
-  "All",
-  "Trending",
-  "Sports",
-  "Movies",
-  "Podcasts",
-  "Music",
-  "News",
-  "Thrillers",
-  "Mixes",
-  "Recently uploaded",
-  "Live",
-  "New to you",
-];
-
-const ButtonList = () => {
+const ButtonList = ({ setCategoryId }) => {
   return (
     <div className="bg-white flex flex-wrap">
-      {listOfButtons.map((name,index) => (
-        <Button key={index} name={name}/>
+      {listOfButtons.map((button) => (
+        <Button key={button.id} info={button} setCategoryId={setCategoryId} />
       ))}
     </div>
   );
