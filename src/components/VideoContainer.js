@@ -3,7 +3,7 @@ import useVideoList from "../utils/usevideoList";
 import { Link } from "react-router-dom";
 
 const VideoContainer = () => {
-  const videos = useVideoList();
+  const {videos} = useVideoList();
 
   return (
     <div className="mt-6 flex flex-wrap">

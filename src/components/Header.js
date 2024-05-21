@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import menu from "../assets/menu.png";
 import logo from "../assets/logo.png";
 import search from "../assets/search.png";
