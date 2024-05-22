@@ -3,8 +3,9 @@ import React from "react";
 const Comments = ({ comment }) => {
   const { authorDisplayName, authorProfileImageUrl, textDisplay } =
     comment?.snippet?.topLevelComment?.snippet;
+
   return (
-    <div className="flex mb-5 max-w-[950px]">
+    <div className="flex mb-5">
       <img
         className="rounded-full h-1/2"
         alt="profile"

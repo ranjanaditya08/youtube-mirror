@@ -6,7 +6,7 @@ const CommentsContainer = ({ videoId }) => {
   const comments = useCommentsList({ videoId });
 
   return (
-    <div className="max-W-[950px]">
+    <div className="">
       <h5 className="font-bold text-xl mt-3 mb-4">Comments:</h5>
       {comments.map((comment) => (
         <Comments key={comment.id} comment={comment} />
