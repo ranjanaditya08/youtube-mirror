@@ -28,7 +28,7 @@ const WatchPage = () => {
   return (
     <div className="">
       <div className="flex ml-5 mt-2 p-2">
-        <div className="max-w-[950px] h-[550px] mr-3">
+        <div className="max-w-[950px] max-h-[550px] md mr-3">
           <iframe
             className="rounded-xl"
             width="950"
