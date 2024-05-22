@@ -16,15 +16,15 @@ const VideoCard = ({ info }) => {
   }
 
   return (
-    <div className="max-w-[360px] mt-2 mr-4 hover:shadow-sm p-2 rounded-md">
+    <div className="p-2">
       <img
-        className="rounded-lg w-[358.2px] h-[201px]"
+        className="rounded-lg w-full h-auto object-cover"
         alt="thumbnail"
         src={thumbnails.medium.url}
       />
       <ul>
-        <li className="font-bold overflow-hidden">{title}</li>
-        <li className="text-gray-500">{channelTitle}</li>
+        <li className="font-bold text-base line-clamp-2">{title}</li>
+        <li className="text-gray-500 text-sm">{channelTitle}</li>
         <li className="text-gray-500 text-sm">
           {viewCount}
           <span className="tracking-tight text-sm"> views</span>
