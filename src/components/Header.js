@@ -14,8 +14,6 @@ const Header = () => {
     setSuggestionFocus,
   } = useSearchSuggestion();
 
-  
-
   return (
     <div className="sticky top-0 z-50 bg-white flex justify-between mt-2 px-6 py-2 min-w-[768px]">
       <div className="flex">
