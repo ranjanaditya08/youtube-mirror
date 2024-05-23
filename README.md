@@ -1,20 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-
 # Youtube-Mirror
 
 ## Overview
@@ -40,8 +23,17 @@ To use Youtube-Mirror locally on your system, follow these steps:
 
 1. Create a [Google Cloud Platform](https://console.cloud.google.com/) project and enable the YouTube Data API
 2. Generate API key [credentials](https://console.cloud.google.com/apis/credentials).
-3. clone repository :
-4. Keep the key name as GOOGLE_API_KEY = 'your_key' in (/src/utils/constants)
+3. clone repository : (https://github.com/ranjanaditya08/youtube-mirror.git)
+4. Keep the key name as REACT_APP_GOOGLE_API_KEY = 'your_key' in **.env file**
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ## Credits
