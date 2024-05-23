@@ -9,7 +9,7 @@ Youtube-Mirror is a project that utilizes the YouTube API to fetch videos, comme
 ## Images :
  [Home Page](https://drive.google.com/file/d/1XT8RaTRNVeyHJbZNNRBmuhmdUoekDhDp/view?usp=drive_link)
  
- [Watch Page](https://drive.google.com/file/d/1XT8RaTRNVeyHJbZNNRBmuhmdUoekDhDp/view?usp=drive_link)
+ [Watch Page](https://drive.google.com/file/d/199xhc1wJuLTpo1lEDc3UgXadPGgwUcv5/view?usp=drive_link)
 
 
 ## Features
