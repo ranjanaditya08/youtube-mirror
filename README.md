@@ -24,7 +24,7 @@ To use Youtube-Mirror locally on your system, follow these steps:
 1. Create a [Google Cloud Platform](https://console.cloud.google.com/) project and enable the YouTube Data API
 2. Generate API key [credentials](https://console.cloud.google.com/apis/credentials).
 3. clone repository : (https://github.com/ranjanaditya08/youtube-mirror.git)
-4. Keep the key name as REACT_APP_GOOGLE_API_KEY = 'your_key' in **.env file**
+4. Keep the key name as ``` REACT_APP_GOOGLE_API_KEY = 'your_key'``` in **.env file**
 
 ## Available Scripts
 
