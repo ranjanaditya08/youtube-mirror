@@ -7,9 +7,9 @@ Youtube-Mirror is a project that utilizes the YouTube API to fetch videos, comme
 ## Video :
  (https://drive.google.com/file/d/1A0ZQUSHhsyKi9ciXMRNrbJ2Nqi74FzHt/view?usp=drive_link)
 ## Images :
- ![Home Page](https://drive.google.com/file/d/1XT8RaTRNVeyHJbZNNRBmuhmdUoekDhDp/view?usp=drive_link)
+ [Home Page](https://drive.google.com/file/d/1XT8RaTRNVeyHJbZNNRBmuhmdUoekDhDp/view?usp=drive_link)
  
- ![Watch Page](https://drive.google.com/file/d/1XT8RaTRNVeyHJbZNNRBmuhmdUoekDhDp/view?usp=drive_link)
+ [Watch Page](https://drive.google.com/file/d/1XT8RaTRNVeyHJbZNNRBmuhmdUoekDhDp/view?usp=drive_link)
 
 
 ## Features
@@ -31,7 +31,7 @@ To use Youtube-Mirror locally on your system, follow these steps:
 
 1. Create a [Google Cloud Platform](https://console.cloud.google.com/) project and enable the YouTube Data API
 2. Generate API key [credentials](https://console.cloud.google.com/apis/credentials).
-3. clone repository : (https://github.com/ranjanaditya08/youtube-mirror.git)
+3. clone repository : ``` git clone "https://github.com/ranjanaditya08/youtube-mirror.git" ```
 4. Keep the key name as ``` REACT_APP_GOOGLE_API_KEY = 'your_key'``` in **.env file**
 
 ## Available Scripts
