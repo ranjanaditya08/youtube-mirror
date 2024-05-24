@@ -19,6 +19,7 @@ const WatchPage = () => {
   useEffect(() => {
     getVideoData();
   }, [searchParam]);
+  
   const getVideoData = async () => {
     const data = await fetch(GET_YOUTUBE_VIDEO_BY_ID + searchParam.get("v"));
     const json = await data.json();
@@ -26,30 +27,27 @@ const WatchPage = () => {
   };
 
   return (
-    <div className="">
-      <div className="flex ml-5 mt-2 p-2">
-        <div className="max-w-[950px] max-h-[550px] md mr-3">
+    <div className="flex flex-col md:flex-row">
+      <div className="w-full md:w-3/5 p-2">
+        <div className="aspect-w-16 aspect-h-9">
           <iframe
-            className="rounded-xl"
-            width="950"
-            height="550"
+            className="rounded-xl w-full h-[40vw]"
             src={"https://www.youtube.com/embed/" + searchParam.get("v")}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <div>
-            {videoData && (
-              <VideoContainer categoryId={videoData.snippet.categoryId} />
-            )}
-          </div>
         </div>
-
-        <div>
+        <div className="mt-4">
           {videoData && <Description snippet={videoData.snippet} />}
-          <CommentsContainer videoId={searchParam.get("v")} />
+          {videoData && (
+            <VideoContainer categoryId={videoData.snippet.categoryId} />
+          )}
         </div>
+      </div>
+      <div className="w-full md:w-2/5 p-2">
+        <CommentsContainer videoId={searchParam.get("v")} />
       </div>
     </div>
   );
