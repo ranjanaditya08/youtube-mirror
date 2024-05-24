@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 const Body = () => {
   return (
-    <div className='flex min-w-[768px]'>
+    <div className='flex'>
         <Sidebar />
         <Outlet />
     </div>

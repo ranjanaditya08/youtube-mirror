@@ -16,7 +16,7 @@ const VideoCard = ({ info }) => {
   }
 
   return (
-    <div className="p-2">
+    <div className="p-2 hover:shadow-sm hover:scale-105 transition-all duration-500">
       <img
         className="rounded-lg w-full h-auto object-cover"
         alt="thumbnail"
