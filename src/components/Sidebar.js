@@ -1,13 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.menuDrawer.isMenuOpen);
+  const location = useLocation();
+
+  const isWatchPage = location.pathname.includes("/watch");
 
   return (
     isMenuOpen && (
-      <div className=" w-52 h-full px-3 transition duration-150 bg-white">
+      <div className={ `fixed w-52 px-3 transition duration-150 bg-white ${isWatchPage ? 'fixed' : 'sm:relative'} h-full bg-white`}>
         <ul className="border-b mb-1">
           <Link to={"/"}>
             <li className="list-style">Home</li>
@@ -15,7 +20,7 @@ const Sidebar = () => {
           <li className="list-style">Shorts</li>
           <li className="list-style mb-2">Subscriptions</li>
         </ul>
-        <h2 className=" hover:bg-gray-300 px-6 py-2 cursor-pointer rounded-lg text-[16px] font-bold">
+        <h2 className="hover:bg-gray-300 px-6 py-2 cursor-pointer rounded-lg text-[16px] font-bold">
           You <span className="ml-2">{">"}</span>
         </h2>
         <ul className="border-b mb-1">
@@ -26,7 +31,7 @@ const Sidebar = () => {
           <li className="list-style">Watch later</li>
           <li className="list-style mb-2">Liked videos</li>
         </ul>
-        <h2 className=" hover:bg-gray-300 px-6 py-2 cursor-pointer rounded-lg text-[16px] font-bold">
+        <h2 className="hover:bg-gray-300 px-6 py-2 cursor-pointer rounded-lg text-[16px] font-bold">
           Explore
         </h2>
         <ul>
